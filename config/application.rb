@@ -20,5 +20,3 @@ module TodoManager
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
-#random line
-#randddddddddddom 
