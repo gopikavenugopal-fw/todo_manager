@@ -9,5 +9,19 @@ class TodosController< ApplicationController
         render plain: todo.to_pleasant_string
     end
 
+    def create 
+        todo_text=param[:todo_text]
+        due_date=DateTime.parse(params[:due_date])
+        new_todo=Todo.create!(
+            todo_text: todo_text,
+            due_date: due_date,
+            completed:false,
+        )
+
+        response_text= "Hey, your new todo is added"
+        render plain: response_text
+    end
+
+    
     
 end

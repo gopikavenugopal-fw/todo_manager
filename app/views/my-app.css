@@ -1,0 +1,66 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
+.Todo-title{
+    font-size: 48px;
+    line-height: 1.6;
+    color: #453c52;
+}
+.Todosection-title {
+    
+    color: #453c52;
+    align-items: center;
+    display:flex
+} 
+.Todosection-title-text{
+    font-size: 24px;
+    line-height: 1.4;
+    margin-right: 8px;
+}
+
+.Todo-todo{
+    font-size: 20px;
+    margin-left: 32px;
+    color: #453c52;
+}
+
+.TodoSection {
+    margin-bottom: 24px;
+    margin-left: 32px;
+}
+.splashimage{
+    max-width: 400px;
+    border-radius: 4px;
+}
+.Todo-todo
+{
+    list-style: none;
+}
+.TodoButton {
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 10px 24px;
+    color: black;
+    background-color: lightblue;
+    border: 1px solid transparent
+}
+.AddTodo
+{
+    display: flex;
+    height: 32px;
+    align-items: stretch;
+    margin-bottom: 24px;
+    border-radius: 12px;
+}
+.AddTodo-text
+{
+    height: 32px;
+}
+.AddTodo-date
+{
+    height: 32px;
+}
