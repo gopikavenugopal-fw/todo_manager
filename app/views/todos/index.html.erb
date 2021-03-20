@@ -1,0 +1,30 @@
+
+
+  <main class="Todomain">
+        <img class="splashimage" src="side-bar.jpg">
+        <h1 class="Todo-title"> My Todo-List</h1>
+        <article>
+            <div class="AddTodo">
+                <form>
+                    <input type="text" placeholder="Add your Todo!" class="AddTodo-text"> 
+                    <input type="date" class="AddTodo-date">
+                    <input type="button" value="Add" class="TodoButton">
+                </form>
+            </div>
+            
+            <%= render partial: "todo-section", locals: {
+                section_title: "Overdue",
+                todos: Todo.overdue,
+                todos: Todo.show
+                } %>
+            <%= render partial: "todo-section", locals: {
+                section_title: "Due Today",
+                todos: Todo.due_today
+                } %>
+            <%= render partial: "todo-section", locals: {
+                section_title: "Due Later",
+                todos: Todo.due_later
+                } %>
+            
+        </article>
+</main>

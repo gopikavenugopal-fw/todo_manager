@@ -1,0 +1,17 @@
+<section class="TodoSection">
+<div class="Todosection-title">
+    <p class="Todosection-title-text"> <%= section_title %></p>
+    <p class="Todosection-remaining"><%= todos.completed.count %> / <%= todos.count %></p>
+</div>
+<ul>
+<% todos.all.each do |todo|%>
+    <li class="Todo-todo">
+        <label class="Todosection-container">
+        <input type="checkbox"> <%= todo.todo_text%>
+         </label> 
+    </li>
+
+<% end %>
+</ul>
+</section>
+        

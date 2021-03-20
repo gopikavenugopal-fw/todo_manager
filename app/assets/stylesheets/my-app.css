@@ -64,3 +64,11 @@ body{
 {
     height: 32px;
 }
+.TodoItem-delete{
+    width: 16px;
+}
+.Todosection-container
+{
+    display: flex;
+    margin-right: 4px;
+}

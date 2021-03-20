@@ -1,6 +1,7 @@
 class TodosController< ApplicationController
     def index 
-        render plain: Todo.order(:due_date).map{|todo|todo.to_pleasant_string}.join("\n")
+        #render plain: Todo.order(:due_date).map{|todo|todo.to_pleasant_string}.join("\n")
+        render "index"
     end
 
     def show
@@ -20,6 +21,15 @@ class TodosController< ApplicationController
 
         response_text= "Hey, your new todo is added"
         render plain: response_text
+    end
+
+    def update
+        id=params[:id]
+        completed=params[:completed]
+        todo = todo.find(id)
+        todo.completed =completed
+        todo.save!
+        render plain: "updated the todo completed status to #{completed}"
     end
 
     
