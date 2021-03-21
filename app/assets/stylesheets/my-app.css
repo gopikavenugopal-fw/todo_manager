@@ -72,3 +72,7 @@ body{
     display: flex;
     margin-right: 4px;
 }
+.Todo-completed
+{
+    text-decoration: line-through;
+}

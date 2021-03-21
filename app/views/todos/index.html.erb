@@ -1,21 +1,20 @@
 
-
   <main class="Todomain">
-        <img class="splashimage" src="side-bar.jpg">
+        
         <h1 class="Todo-title"> My Todo-List</h1>
         <article>
             <div class="AddTodo">
-                <form>
-                    <input type="text" placeholder="Add your Todo!" class="AddTodo-text"> 
-                    <input type="date" class="AddTodo-date">
-                    <input type="button" value="Add" class="TodoButton">
+                <form action="/todos" method="POST">
+                    <input type="text" placeholder="Add your Todo!" class="AddTodo-text" name="todo_text"> 
+                    <input type="date" class="AddTodo-date" name="due_date">
+                    <input type="submit" value="Add" class="TodoButton">
                 </form>
             </div>
             
             <%= render partial: "todo-section", locals: {
                 section_title: "Overdue",
                 todos: Todo.overdue,
-                todos: Todo.show
+                #todos: Todo.show
                 } %>
             <%= render partial: "todo-section", locals: {
                 section_title: "Due Today",
