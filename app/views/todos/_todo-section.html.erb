@@ -11,10 +11,15 @@
             <input type="checkbox" <%= todo.completed ? "checked" : " "%> 
                 name="completed" 
                 onclick="this.form.submit()" 
-            /> 
-            
+            />    
         <%end%>
         <p class="<%= todo.completed ? "Todo-completed" : " " %>"> <%= todo.todo_text%> </p>
+        <a href="javascript:void(0)" class="Todo-Delete"> 
+        <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+        
+        <input type="button" value="D" onclick="this.form.submit()" class="Delete-button">
+        <%end%>
+        </a>
          </label> 
     </li>
 

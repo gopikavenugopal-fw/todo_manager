@@ -76,3 +76,17 @@ body{
 {
     text-decoration: line-through;
 }
+.Todo-Delete
+{
+    width: 4px;
+    display: flex;
+    margin-left: 16px;
+    
+}
+.Delete-button:hover + .Todo-Delete
+{
+
+ color: gray;
+ display: block;
+ 
+}
