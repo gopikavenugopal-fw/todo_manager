@@ -4,11 +4,13 @@
         <h1 class="Todo-title"> My Todo-List</h1>
         <article>
             <div class="AddTodo">
-                <form action="/todos" method="POST">
+            <%= form_with(url: "/todos", method: "post") do %>
+               
                     <input type="text" placeholder="Add your Todo!" class="AddTodo-text" name="todo_text"> 
                     <input type="date" class="AddTodo-date" name="due_date">
                     <input type="submit" value="Add" class="TodoButton">
-                </form>
+               
+            <% end %>
             </div>
             
             <%= render partial: "todo-section", locals: {

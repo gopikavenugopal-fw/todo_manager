@@ -35,7 +35,7 @@ class TodosController < ApplicationController
         redirect_to todos_path
     end
 
-    skip_before_action :verify_authenticity_token
+    
     def destroy
         id= params[:id]
         todo= Todo.find(id)
