@@ -10,6 +10,10 @@ class Todo< ActiveRecord::Base
         due_date == Date.today 
     end
 
+    def of_user(user)
+        all.where(user_id: user.id)
+    end
+
     def self.show_list
         all.map{ |todo| todo.to_pleasant_string}
     end
