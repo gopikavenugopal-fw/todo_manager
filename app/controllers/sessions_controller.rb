@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
             redirect_to "/"
         
         else
-            render plain: "Oh no Incorrect!"
+            flash[:error]= "Your login attempt was invalid. Please try again"
+            redirect_to new_sessions_path
     
         end
     end
